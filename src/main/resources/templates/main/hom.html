@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" lang="en"><head>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Title</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" th:fragment="foo">
+  <a class="navbar-brand" href="#">01</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" th:href="@{/}">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" th:href="@{/new}">Add</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<br/>
+<br/>
+<h2 class="d-flex justify-content-center">Enter task information</h2>
+<br/>
+<div class="d-flex justify-content-center">
+
+<form action="/save" method="post" th:object="${tasks}">
+
+  <h4>Name <input type="text" th:field="${tasks.name}"></h4>
+
+  <h4 class="d-flex justify-content-center">
+  <input type="checkbox" id="po" name="po"  th:field="${tasks.isdone}" th:value="true">
+  <label for="po"> Done</label>
+  </h4>
+
+  <h5 class="d-flex justify-content-center"><input  type="reset" class="btn btn-secondary" value="Reset">
+    &nbsp;&nbsp;&nbsp;<input type="submit" class="btn btn-primary" value="Submit"></h5>
+
+
+</form>
+      </div>
+</body>
+
+</html>
