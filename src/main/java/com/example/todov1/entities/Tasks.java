@@ -14,7 +14,9 @@ public class Tasks {
     private long id;
 
     private String name;
+    private String description;
     private boolean isdone;
+
 
 
     public Tasks(){
@@ -22,10 +24,17 @@ public class Tasks {
 
     }
 
-    public Tasks(long id, String name, boolean isdone) {
+    public Tasks(long id, String name, boolean isdone,String description) {
         this.id = id;
         this.name = name;
         this.isdone = isdone;
+        this.description = description;
+    }
+
+    public Tasks(String name, boolean isdone,String description) {
+        this.name = name;
+        this.isdone = isdone;
+        this.description = description;
 
     }
 
@@ -52,6 +61,9 @@ public class Tasks {
     public void setIsdone(boolean isdone) {
         this.isdone = isdone;
     }
+    public String getDescription() {return description;}
+
+    public void setDescription(String description) {this.description = description;}
 
 
 

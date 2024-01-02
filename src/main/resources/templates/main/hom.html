@@ -11,7 +11,7 @@
   <title>Title</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark" th:fragment="foo">
+<nav class="navbar navbar-expand-lg navbar-dark bg-info" th:fragment="foo">
   <a class="navbar-brand" href="#">01</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -31,21 +31,30 @@
 
 <br/>
 <br/>
-<h2 class="d-flex justify-content-center">Enter task information</h2>
+<h2 class="d-flex justify-content-center"><strong>Enter task information</strong></h2>
 <br/>
+<br>
 <div class="d-flex justify-content-center">
 
 <form action="/save" method="post" th:object="${tasks}">
 
-  <h4>Name <input type="text" th:field="${tasks.name}"></h4>
+  <h5>Name&nbsp;&nbsp;<input type="text" class="form-control" th:field="${tasks.name}"></h5>
+  <br>
 
-  <h4 class="d-flex justify-content-center">
+
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1"><h5>Description</h5></label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" th:field="${tasks.description}"></textarea>
+    </div>
+
+  <h5 class="d-flex justify-content-center">
   <input type="checkbox" id="po" name="po"  th:field="${tasks.isdone}" th:value="true">
-  <label for="po"> Done</label>
-  </h4>
+  <label for="po" class="form-check-label">&nbsp; Done</label>
+  </h5>
+  <br>
 
   <h5 class="d-flex justify-content-center"><input  type="reset" class="btn btn-secondary" value="Reset">
-    &nbsp;&nbsp;&nbsp;<input type="submit" class="btn btn-primary" value="Submit"></h5>
+    &nbsp;&nbsp;&nbsp;<input type="submit" class="btn btn-primary bg-info" value="Submit"></h5>
 
 
 </form>
