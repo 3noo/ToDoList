@@ -15,6 +15,7 @@ public class Tasks {
 
     private String name;
     private String description;
+    private String date;
     private boolean isdone;
 
 
@@ -24,17 +25,27 @@ public class Tasks {
 
     }
 
-    public Tasks(long id, String name, boolean isdone,String description) {
+    public Tasks(long id, String name, boolean isdone,String description,String date) {
         this.id = id;
         this.name = name;
         this.isdone = isdone;
         this.description = description;
+        this.date = date;
     }
 
     public Tasks(String name, boolean isdone,String description) {
         this.name = name;
         this.isdone = isdone;
         this.description = description;
+        this.date = date;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
 
     }
 

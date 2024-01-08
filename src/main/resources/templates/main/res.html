@@ -37,6 +37,7 @@
       <thead class="thead-light">
       <th scope="col">Title</th>
       <th scope="col">Description</th>
+      <th scope="col">Date due</th>
       <th scope="col">Status</th>
       <th scope="col">Action</th>
       </thead>
@@ -45,6 +46,7 @@
       <tr th:each="aTask : ${tasks}">
         <td th:text="${aTask.name}">
           <td th:text="${aTask.description}">
+        <td th:text="${aTask.date}">
 
         <td th:text="${aTask.isdone} ? 'Done' : 'Not Done'" />
         <td>
