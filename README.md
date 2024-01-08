@@ -1,13 +1,14 @@
 # ToDoList
 To-Do Web Application made with Spring Boot , H2 ,Thymeleaf ,Bootstrap
 
+![1](https://github.com/3noo/ToDoList/assets/103357132/82576a72-0fac-483f-a492-25444141cf36)
 
-![p1](https://user-images.githubusercontent.com/103357132/204404261-4edf3759-7be7-436a-9dc4-2cd07ba7e541.jpg)
 
 
 Create ,Read ,Update and Delete data from H2 database
 
+![2](https://github.com/3noo/ToDoList/assets/103357132/02e19213-063f-4873-a2b6-e7560cd8939c)
 
 
-![p2](https://user-images.githubusercontent.com/103357132/204404272-6e5f12a0-6297-423a-9fb1-ec33d06fb76f.jpg)
+
 
