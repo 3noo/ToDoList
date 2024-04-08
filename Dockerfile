@@ -3,6 +3,6 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 FROM openjdk:18-alpine
-COPY --from=build /target/todo1-0.0.1-SNAPSHOT.jar todo1.jar
+COPY --from=build /out/artifacts/todo1_jar/todo1.jar todo1.jar
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","todo1.jar"]
